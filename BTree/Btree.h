@@ -1,5 +1,5 @@
-#ifndef ARVOREB_H
-#define ARVOREB_H
+#ifndef BTREE_H
+#define BTREE_H
 
 #include <math.h>
 #include <stdio.h>
@@ -7,11 +7,12 @@
 
 #define ordem 7 // número máximo de filhos
 
-typedef struct NO {
+typedef struct NO
+{
   int *valores;
   int qtd;
   struct NO **filhos;
-} * ArvB;
+} *ArvB;
 
 // Funcoes padroes
 ArvB *arvB_cria();
@@ -35,4 +36,4 @@ void redistribuicao(ArvB *filhoDir, ArvB *filhoEsq, ArvB *pai);
 void concatena(ArvB *dest, ArvB *src, ArvB *pai);
 int debug_verificar_qtd(ArvB *raiz);
 
-#endif // ARVOREB_H
+#endif // BTREE_H
